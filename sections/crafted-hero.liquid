@@ -1,0 +1,40 @@
+{% schema %}
+{
+  "name": "Crafted Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Crafted by Heart. Built by Hand."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "We believe in creating with purpose — not punching clocks. Explore the custom-crafted spirit behind every Salt & Splinter piece."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Crafted Hero",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="crafted-hero-section" style="position: relative; text-align: center; padding: 3rem 1rem; color: #1a1a1a; background-color: #f8f8f8;">
+  {% if section.settings.background_image %}
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; background: url({{ section.settings.background_image | img_url: '1600x' }}) center/cover no-repeat; opacity: 0.1;"></div>
+  {% endif %}
+  <div style="position: relative; z-index: 1; max-width: 800px; margin: 0 auto;">
+    <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">{{ section.settings.headline }}</h1>
+    <p style="font-size: 1.125rem;">{{ section.settings.subtext }}</p>
+  </div>
+</div>

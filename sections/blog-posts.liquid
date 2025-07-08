@@ -1,0 +1,11 @@
+<div class="blog-posts animated-fade" style="margin: 2rem 0;">
+      <h2>{{ section.settings.title }}</h2>
+      <div>
+        {% for article in blogs[section.settings.blog].articles limit: section.settings.posts_to_show %}
+          <div style="margin-bottom: 1.5rem;">
+            <h4><a href="{{ article.url }}">{{ article.title }}</a></h4>
+            <p>{{ article.excerpt | strip_html | truncate: 100 }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
