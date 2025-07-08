@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "welcome_text": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Crafted by Heart. Built by Hand.",
+        "text": "<p>Welcome to Salt & Splinter \u2014 where we believe in making and creating for a living, not punching clocks.</p>"
+      }
+    },
+    "collection_grid": {
+      "type": "category-grid"
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Customer Favorites",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4
+      }
+    },
+    "blog_teaser": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "From the Workshop",
+        "blog": "",
+        "posts_to_show": 2
+      }
+    }
+  },
+  "order": [
+    "welcome_text",
+    "collection_grid",
+    "featured_products",
+    "blog_teaser"
+  ]
+}
